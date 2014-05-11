@@ -37,9 +37,6 @@ describe(@"UIAlertViewBlocksTests", ^{
         }];
     });
     
-    beforeEach(^{
-    });
-    
     it(@"should conform to UIAlertViewDelegate Protocol", ^{
         expect([UIAlertViewBlocks class]).to.conformTo(@protocol(UIAlertViewDelegate));
     });
@@ -48,7 +45,7 @@ describe(@"UIAlertViewBlocksTests", ^{
         expect([UIAlertViewBlocks alloc]).to.respondTo(@selector(initWithTitle:message:cancelButtonTitle:otherButtonTitles:tapBlock:));
     });
     
-    it(@"should allow initialization with designated initiatlizer", ^{
+    it(@"should allow initialization with designated initializer", ^{
         expect([UIAlertViewBlocks alloc]).to.respondTo(@selector(initWithTitle:message:cancelButtonTitle:otherButtonTitles:tapBlock:shouldEnableBlock:willPresentBlock:didPresentBlock:willDismissBlock:didDismissBlock:cancelBlock:));
     });
     
@@ -117,11 +114,6 @@ describe(@"UIAlertViewBlocksTests", ^{
     });
     it(@"should implement alertViewCancel", ^{
         expect(alertViewBlocks).to.respondTo(@selector(alertViewCancel:));
-    });
-    
-    afterEach(^{
-    });
-    afterAll(^{
     });
     
 });
