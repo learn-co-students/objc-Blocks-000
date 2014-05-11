@@ -15,7 +15,7 @@ Often referred to as annonymous functions, closures, or lambdas in other languag
 Your challenge should you choose to except it, is to implement UIAlertView using blocks instead of delegates.  
 
 - Your implementation should be put into a subclass of UIAlertView called 'UIAlertViewBlocks'
-- Each UIAlertView Delegate method should be suplemented with a block property.  For example, instead of calling `-alertView:clickedButtonAtIndex:` a user of your class will call the block tapBlock
+- Each UIAlertView Delegate method should be suplemented with a block property.  For example, instead of calling `-alertView:clickedButtonAtIndex:` a user of your class will call the block tapBlock. Note that the method signature of your blocks, should be the same as the method signature of the delegate method.
 
 **Delegate**`– alertView:clickedButtonAtIndex:` = **Block** `^tapBlock`
 
