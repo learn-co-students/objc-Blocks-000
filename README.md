@@ -15,30 +15,18 @@ Often referred to as anonymous functions, closures, or lambdas in other language
 Your challenge should you choose to except it, is to implement `UIAlertView` using blocks instead of delegates.  
 
 - Your implementation should be put into a subclass of `UIAlertView` called `UIAlertViewBlocks`
-- Each `UIAlertView` Delegate method should be supplemented with a block property.  For example, instead of calling `-alertView:clickedButtonAtIndex:` a user of your class will call the block tapBlock. Note that the method signature of your blocks, should be the same as the method signature of the delegate method.
+- Your new class is going to actually be the delegate to itself. Remember `UIAlertView` is your super class..
+- Implement each of the delegate methods, but instead of implementing them we are going to have them call a block.
+- Each `UIAlertView` Delegate method should be supplemented with a block property.  For example, instead of calling `-alertView:clickedButtonAtIndex:` a user of your class will call the block `(void (^)(UIAlertView *alertView, NSInteger index)tapBlock`. Note that the method signature of your blocks, should be the same as the method signature of the delegate method.
 
-**Delegate**`– alertView:clickedButtonAtIndex:` = **Block** `^tapBlock`
-
-**Delegate**`– alertViewShouldEnableFirstOtherButton:` = **Block** `^ShouldEnableFirstOtherButtonBlock`
-
-**Delegate**`– willPresentAlertView:` = **Block** `^willPresentBlock`
-
-**Delegate**`– didPresentAlertView:` = **Block** `^didPresentBlock`
-
-**Delegate**`– alertView:willDismissWithButtonIndex:` = **Block** `^willDismissBlock`
-
-**Delegate**`– alertView:didDismissWithButtonIndex:` = **Block** `^didDismissBlock`
-
-**Delegate**`– alertViewCancel:` = **Block** `^cancelBlock`
-
-- AlertViewBlocks should have two initializers:
+- AlertViewBlocks should have two initializers...where should you store these blocks?
 
 ```objc
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
             cancelButtonTitle:(NSString *)cancelButtonTitle
             otherButtonTitles:(NSString *)otherButtonTitles
-                     tapBlock:(TapBlock)tapBlock;
+                     tapBlock:(void (^)(UIAlertView *alertView, NSInteger index)tapBlock;
 ```
 and
 ```objc
@@ -55,7 +43,7 @@ and
                   cancelBlock:(AlertBlock)cancelBlock;
 ```
 
-**TapBlock, ShouldEnableBlock and AlertBlock are typedefs that describe the blocks used in each method parameter.**
+**TapBlock, ShouldEnableBlock and AlertBlock are placeholders. You should actually write the method signature**
 
 ```objc
 
@@ -194,3 +182,7 @@ typedef double(^farTempFromCelcTempBlock)(double); //create type definition for 
 
 - [RyPress Blocks Tutorial](http://rypress.com/tutorials/objective-c/blocks.html)
 - [Gosh Darn Block Syntax](http://goshdarnblocksyntax.com)
+
+## ExtraCredit
+
+  * Make everything typedef based. It'll be MUCH cleaner.
