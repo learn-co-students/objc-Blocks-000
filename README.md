@@ -1,5 +1,5 @@
 ---
-  tags: tutorial, beginner, OOP, Object-Oriented Programming, model
+  tags: blocks
   languages: objc
 ---
 
@@ -8,14 +8,14 @@ objc-Blocks
 
 Blocks are a fairly new addition to Objective-C, and have quickly become a staple in iOS frameworks.  Blocks provide an easy-to-use alternative to the delegation pattern in concurrent (multi-threaded) operations.
 
-Often referred to as annonymous functions, closures, or lambdas in other languages, blocks allow for function-like behavior to be encapsulated in method parameters and variables.  
+Often referred to as anonymous functions, closures, or lambdas in other languages, blocks allow for function-like behavior to be encapsulated in method parameters and variables.  
 
 ##Instructions
 
-Your challenge should you choose to except it, is to implement UIAlertView using blocks instead of delegates.  
+Your challenge should you choose to except it, is to implement `UIAlertView` using blocks instead of delegates.  
 
-- Your implementation should be put into a subclass of UIAlertView called 'UIAlertViewBlocks'
-- Each UIAlertView Delegate method should be suplemented with a block property.  For example, instead of calling `-alertView:clickedButtonAtIndex:` a user of your class will call the block tapBlock
+- Your implementation should be put into a subclass of `UIAlertView` called `UIAlertViewBlocks`
+- Each `UIAlertView` Delegate method should be supplemented with a block property.  For example, instead of calling `-alertView:clickedButtonAtIndex:` a user of your class will call the block tapBlock. Note that the method signature of your blocks, should be the same as the method signature of the delegate method.
 
 **Delegate**`– alertView:clickedButtonAtIndex:` = **Block** `^tapBlock`
 
@@ -74,7 +74,7 @@ Examples
 
 Blocks come in many different shapes and sizes
 
-Block syntax can be quite a mystery for beggining and expereienced Objective-C programmers alike.  In fact, there is an [entire website](http://goshdarnblocksyntax.com) dedicated to demystifying their formation.  Let's explore a few of the many ways to use blocks. (This list is lifted directly from goshdarnblocksyntax.com, with explanations added)
+Block syntax can be quite a mystery for beginning and experienced Objective-C programmers alike.  In fact, there is an [entire website](http://goshdarnblocksyntax.com) dedicated to demystifying their formation.  Let's explore a few of the many ways to use blocks. (This list is lifted directly from goshdarnblocksyntax.com, with explanations added)
 
 
 ###Local Variable
@@ -96,7 +96,7 @@ Block syntax can be quite a mystery for beggining and expereienced Objective-C p
     double myFarTemp = farTempFromCelcTemp(0); //returns 32.0
 ```
 
-**Explanation:** This example shows a block being declared as a local variable. The block is then assigned a block function that implements converting a celcius temperature to farenheit. The block is then called and it's return value is assigned to a local variable.
+**Explanation:** This example shows a block being declared as a local variable. The block is then assigned a block function that implements converting a Celsius temperature to Fahrenheit. The block is then called and it's return value is assigned to a local variable.
 
 ###Property
 
@@ -147,7 +147,7 @@ Block syntax can be quite a mystery for beggining and expereienced Objective-C p
 }
 
 ```
-**Explanation:** The method `-getFriendsWithCompletion:` takes the block `completion` as a paremeter.  
+**Explanation:** The method `-getFriendsWithCompletion:` takes the block `completion` as a parameter.  
 
 ###Argument to a method call
 **Abstraction:** `[someObject someMethodThatTakesABlock: ^returnType (parameters) {...}];`
@@ -158,7 +158,7 @@ Block syntax can be quite a mystery for beggining and expereienced Objective-C p
     }];
 ```
 **Explanation:**
-The method getFriendsWithCompletion: takes the block completion as an argument.  The implementation of the completion block assigns the myFriends array to the blocks array parameter.  Note that the block isn't returning anything in this case.  
+The method `getFriendsWithCompletion:` takes the block completion as an argument.  The implementation of the completion block assigns the `myFriends` array to the blocks array parameter.  Note that the block isn't returning anything in this case.  
 
 
 ###Typedef
