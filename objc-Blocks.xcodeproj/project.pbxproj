@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABAE8181028183DF07A97C64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAE8C7DFA9D450193598633 /* XCTest.framework */; };
-		ABAE8348A2153C67F58A6903 /* UIAlertViewBlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAE8A5E48B7DEF37B19AA64 /* UIAlertViewBlocksTests.m */; };
+		ABAE8348A2153C67F58A6903 /* UIAlertViewBlocksSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAE8A5E48B7DEF37B19AA64 /* UIAlertViewBlocksSpecs.m */; };
 		ABAE8446A51F305C01F93CE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAE807B85CAEEACAB244D61 /* main.m */; };
 		ABAE8497830726C16E859632 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAE842982EF460B545F4F80 /* UIKit.framework */; };
 		ABAE84E60C8061AE73138370 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABAE873B5017130690BF6647 /* InfoPlist.strings */; };
@@ -52,7 +52,7 @@
 		ABAE891C79E4C3E77F48245A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ABAE895BE4BCA8A6B2EF54FE /* FISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		ABAE89AD2D90060547E08F58 /* UIAlertViewBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewBlocks.m; sourceTree = "<group>"; };
-		ABAE8A5E48B7DEF37B19AA64 /* UIAlertViewBlocksTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewBlocksTests.m; sourceTree = "<group>"; };
+		ABAE8A5E48B7DEF37B19AA64 /* UIAlertViewBlocksSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewBlocksSpecs.m; sourceTree = "<group>"; };
 		ABAE8B0C634D7D3A2C0D0D05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABAE8B107A58D74D10C59B9D /* objc-Blocks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "objc-Blocks-Info.plist"; sourceTree = "<group>"; };
 		ABAE8B42B1C132D7E5E0511B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAE86CB29088F54589EC82A /* Supporting Files */,
-				ABAE8A5E48B7DEF37B19AA64 /* UIAlertViewBlocksTests.m */,
+				ABAE8A5E48B7DEF37B19AA64 /* UIAlertViewBlocksSpecs.m */,
 			);
 			path = "objc-BlocksTests";
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAE8348A2153C67F58A6903 /* UIAlertViewBlocksTests.m in Sources */,
+				ABAE8348A2153C67F58A6903 /* UIAlertViewBlocksSpecs.m in Sources */,
 				ABAE883E205662F77221165A /* UIAlertViewBlocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
